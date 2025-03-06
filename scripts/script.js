@@ -10,6 +10,7 @@ let draggedItem = null;
 // Function: Add Task
 function addTask() {
     const taskText = taskInput.value.trim();
+    console.log(taskText);
     if(taskText !== ''){
         const newTask = document.createElement('li');
         newTask.textContent = taskText;
@@ -17,7 +18,9 @@ function addTask() {
         newTask.setAttribute('draggable', 'true');
         list.appendChild(newTask);
         taskInput.value = ''; // clear after 
-    }
+    } 
 }
 
 // Event Listener for Add Task Button
+addTaskButton.addEventListener('click', addTask);
+

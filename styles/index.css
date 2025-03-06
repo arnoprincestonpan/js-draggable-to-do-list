@@ -8,6 +8,24 @@ body {
     font-family: sans-serif;
 }
 
+.input-container {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#taskInput {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+#addTaskButton {
+    background-color: #4CAF50;
+    padding: 8px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 .container {
     width: 80%;
 

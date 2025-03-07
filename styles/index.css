@@ -26,6 +26,14 @@ body {
     cursor: pointer;
 }
 
+.deleteTaskButton {
+    background-color: #ce4646;
+    padding: 8px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 .container {
     width: 80%;
 
@@ -44,6 +52,8 @@ body {
 }
 
 .item {
+    display: flex;
+    justify-content: space-between;
     background-color: #F0F0F0;
 
     padding: 8px;

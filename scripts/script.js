@@ -31,8 +31,15 @@ taskInput.addEventListener('keydown', (e) => {
     }
 });
 
-// Drag Start
+// Drag Start Task List
 list.addEventListener('dragstart', (e) => {
+    draggedItem = e.target;
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', draggedItem.innerHTML);
+});
+
+// Drag Start for Done List
+doneList.addEventListener('dragstart', (e) => {
     draggedItem = e.target;
     e.dataTransfer.effectAllowed = 'move';
     e.dataTransfer.setData('text/html', draggedItem.innerHTML);
@@ -46,3 +53,20 @@ doneList.addEventListener('dragover', (e) => {
     e.preventDefault();
 });
 
+// Drop Listening for Done List
+doneList.addEventListener('drop', (e) => {
+    e.preventDefault();
+    if(draggedItem){
+        doneList.appendChild(draggedItem);
+        draggedItem = null;
+    }
+});
+
+// Drop Listening for Task List
+list.addEventListener('drop', (e) => {
+    e.preventDefault();
+    if(draggedItem){
+        list.appendChild(draggedItem);
+        draggedItem = null;
+    }
+});

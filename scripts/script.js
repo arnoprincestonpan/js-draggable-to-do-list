@@ -13,16 +13,34 @@ function addTask() {
     console.log(taskText);
     if(taskText !== ''){
         const newTask = document.createElement('li');
+        // Text (String) content added to list instance newTask
         newTask.textContent = taskText;
         newTask.classList.add('item');
         newTask.setAttribute('draggable', 'true');
+        
+        // Button element added to list instance newTask
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = "Delete";
+        deleteButton.classList.add('deleteTaskButton');
+
+        // Add Button into newTask list instance
+        newTask.appendChild(deleteButton);
+
+        // Add newTask list intance to list of Tasks
         list.appendChild(newTask);
         taskInput.value = ''; // clear after 
+
+        // Event Listener for Delete Task Button; because this is appended on every new additional tasks
+        deleteButton.addEventListener('click', (e) => {
+            e.target.parentElement.remove();
+        });
     } 
 }
 
+
 // Event Listener for Add Task Button
 addTaskButton.addEventListener('click', addTask);
+
 
 // Event Listener for Enter Key where the input field is
 taskInput.addEventListener('keydown', (e) => {

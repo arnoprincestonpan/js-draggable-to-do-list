@@ -24,3 +24,25 @@ function addTask() {
 // Event Listener for Add Task Button
 addTaskButton.addEventListener('click', addTask);
 
+// Event Listener for Enter Key where the input field is
+taskInput.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){
+        addTask();
+    }
+});
+
+// Drag Start
+list.addEventListener('dragstart', (e) => {
+    draggedItem = e.target;
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', draggedItem.innerHTML);
+});
+
+// Prevent Dragover Default, don't snap back, allow drop
+list.addEventListener('dragover', (e) => {
+    e.preventDefault();
+});
+doneList.addEventListener('dragover', (e) => {
+    e.preventDefault();
+});
+

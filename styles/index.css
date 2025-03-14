@@ -23,6 +23,17 @@ body {
 
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    margin: 0;
+    padding: 20px;
+}
+
+header, p {
+    text-align: center;
+    width: 80%;
+}
+
+h3 {
+    margin-bottom: 8px;
 }
 
 .input-container {
@@ -74,14 +85,19 @@ body {
     justify-content: space-around;
 }
 
+.container > div {
+    width: 48%;
+}
+
 .list-container {
     border: 1px solid #ccc;
     border-radius: 4px;
     min-height: 100px;
-    width: 30%;
+    width: 100%;
     background-color: var(--surface-color);
 
     padding: 16px;
+    box-sizing: border-box;
 }
 
 .item {

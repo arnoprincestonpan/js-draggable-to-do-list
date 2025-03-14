@@ -10,6 +10,7 @@
     <header>
         <h1>JavaScript Draggable To-Do List</h1>
     </header>
+    <p>Instructions: Add a task or more and drag them from one side to the other.</p>
     <div class="input-container">
         <input
         type="text"
@@ -19,14 +20,20 @@
         <button id="addTaskButton">Add Task</button>
     </div>
     <div class="container">
-        <ul id="list" class="list-container">
-            <!-- Placeholder  list items -->
-            <!-- <li class="item" draggable="true">Task 1: Dummy Task <button class="deleteTaskButton">Delete</button></li>
-            <li class="item" draggable="true">Task 2: Dummy Task <button class="deleteTaskButton">Delete</button></li>
-            <li class="item" draggable="true">Task 3: Dummy Task <button class="deleteTaskButton ">Delete</button></li> -->
-        </ul>
-        <ul id="done-list" class="list-container">
-        </ul>
+        <div>
+            <h3>To-Do List</h3>
+            <ul id="list" class="list-container">
+                <!-- Placeholder  list items -->
+                <!-- <li class="item" draggable="true">Task 1: Dummy Task <button class="deleteTaskButton">Delete</button></li>
+                <li class="item" draggable="true">Task 2: Dummy Task <button class="deleteTaskButton">Delete</button></li>
+                <li class="item" draggable="true">Task 3: Dummy Task <button class="deleteTaskButton ">Delete</button></li> -->
+            </ul>
+        </div>
+        <div>
+            <h3>Completed List</h3>
+            <ul id="done-list" class="list-container">
+            </ul>
+        </div>
     </div>
     <script src="/scripts/script.js"></script>
 </body>
